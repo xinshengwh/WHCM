@@ -61,16 +61,14 @@
             background: linear-gradient(145deg, #1f2937, #253141);
             border: 1px solid #374151;
         }
-        /* 为每个section添加最小高度和内边距，使其像一个独立的页面 */
         section[id] {
             min-height: 100vh;
-            padding-top: 8rem; /* 增加顶部内边距以避开导航栏 */
+            padding-top: 8rem;
             padding-bottom: 4rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
-        /* 首页Hero特殊处理 */
         #home {
             min-height: 100vh;
             padding-top: 0;
@@ -115,7 +113,7 @@
         </div>
     </section>
 
-    <!-- 新增：市场洞察 -->
+    <!-- 市场洞察 -->
     <section id="market-insight" class="bg-gray-900">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
@@ -164,7 +162,7 @@
         </div>
     </section>
 
-    <!-- 核心技术 -->
+    <!-- 技术解析 -->
     <section id="technology">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
@@ -220,7 +218,7 @@
         </div>
     </section>
 
-    <!-- 新增：未来展望 -->
+    <!-- 未来展望 -->
     <section id="future-outlook">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="text-center mb-12">
@@ -257,7 +255,7 @@
     <section id="partnership" class="bg-gray-900">
         <div class="container mx-auto px-6 max-w-xl">
              <div class="counter-box text-center p-6 rounded-xl shadow-lg mb-10">
-                <p class="text-gray-300 text-lg">已有 <span id="counter" class="text-yellow-400 font-bold text-2xl">68,653</span> 位专业投资者获取报告</p>
+                <p class="text-gray-300 text-lg">已有 <span id="counter" class="text-yellow-400 font-bold text-2xl"></span> 位专业投资者获取报告</p>
             </div>
             
             <h2 class="text-3xl font-bold text-white text-center mb-4">获取独家报告 & 洽谈合作</h2>
@@ -295,11 +293,53 @@
             // 动态计数器
             const counterElement = document.getElementById('counter');
             if(counterElement) {
-                let baseCount = 125976;
+                let baseCount = 125976; // 已更新基础数字
                 let randomIncrement = Math.floor(Math.random() * 10) + 1;
                 counterElement.textContent = (baseCount + randomIncrement).toLocaleString();
             }
 
             // 表单提交处理
-// ... existing code ... -->
+            const form = document.getElementById('contact-form');
+            const messageDiv = document.getElementById('form-message');
+
+            if(form) {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    const name = document.getElementById('name').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+
+                    if (!name || !phone) {
+                        messageDiv.innerHTML = `<p class="text-red-400">姓名和手机号不能为空。</p>`;
+                        return;
+                    }
+                    
+                    const phoneRegex = /^1[3-9]\d{9}$/;
+                    if (!phoneRegex.test(phone)) {
+                        messageDiv.innerHTML = `<p class="text-red-400">请输入有效的手机号码。</p>`;
+                        return;
+                    }
+
+                    messageDiv.innerHTML = `<p class="text-green-400">提交成功！正在为您准备报告...</p>`;
+                    
+                    // 2秒后打开您仓库中的PDF文件
+                    setTimeout(() => {
+                        // --- 关键修复在这里 ---
+                        // 这个文件名必须与您GitHub仓库中的文件名完全一致
+                        const pdfUrl = '量化VS实体.pdf'; 
+                        
+                        console.log('Attempting to open PDF at:', pdfUrl); // 增加一个日志，方便调试
+
+                        window.open(pdfUrl, '_blank');
+                        
+                        messageDiv.innerHTML = '';
+                        form.reset();
+                    }, 2000);
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
 
