@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>兴盛量化研究室 - 专注于数据驱动的策略模型探索</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .hero-bg {
+            background-color: #111827;
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .section-title {
+            color: #FBBF24;
+        }
+        .card {
+            background-color: #1F2937;
+            border: 1px solid #374151;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.1), 0 4px 6px -2px rgba(251, 191, 36, 0.05);
+        }
+        .btn-primary {
+            background-color: #FBBF24;
+            color: #111827;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #F59E0B;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            backdrop-filter: blur(10px);
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+        .form-input {
+            background-color: #374151;
+            border-color: #4B5563;
+        }
+        .form-input:focus {
+            background-color: #4B5563;
+            border-color: #FBBF24;
+            outline: none;
+            box-shadow: none;
+        }
+        .counter-box {
+            background: linear-gradient(145deg, #1f2937, #253141);
+            border: 1px solid #374151;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <nav class="sticky top-0 z-50 w-full border-b border-gray-700">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="w-8 h-8 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <span class="text-xl font-bold text-white">兴盛量化研究室</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="text-gray-300 hover:text-yellow-400">首页</a>
+                <a href="#about" class="text-gray-300 hover:text-yellow-400">关于我们</a>
+                <a href="#technology" class="text-gray-300 hover:text-yellow-400">核心技术</a>
+                <a href="#risk-philosophy" class="text-gray-300 hover:text-yellow-400">风控理念</a>
+                <a href="#report" class="text-gray-300 hover:text-yellow-400">研究报告</a>
+                <a href="#partnership" class="text-gray-300 hover:text-yellow-400">合作洽谈</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页 Hero Section -->
+    <section id="home" class="hero-bg py-20 md:py-32">
+        <div class="container mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                用数据洞察市场<br class="hidden md:block">
+                <span class="text-yellow-400">用模型探索未来</span>
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                兴盛量化研究室是一家专注于数据科学与量化策略模型研究的机构。我们痴迷于打磨各种量化分析模型，通过分享研究成果和工具，探索金融市场的复杂性。
+            </p>
+            <div class="mt-8">
+                <a href="#partnership" class="btn-primary font-bold py-3 px-8 rounded-lg text-lg inline-block">立即洽谈</a>
+            </div>
+            <p class="mt-6 text-sm text-gray-500 font-semibold">*重要声明：我们不是投资机构，不提供任何形式的投资建议或咨询服务。所有内容仅为学术探讨和模型展示。</p>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">关于我们：纯粹的研究者</h2>
+            <p class="section-title font-semibold text-lg mb-12">痴迷于模型，专注于研究</p>
+            <p class="max-w-4xl mx-auto text-gray-300 text-left md:text-center">
+                我们的创始团队拥有超过16年的行业经验，深刻理解市场动态。但我们选择了一条不同的道路——并非追求投资回报，而是致力于打造一个纯粹的策略研究平台。经过多年的潜心研发与数千次测试，我们构建了一套以数据为基础、以模型为核心的分析框架。我们坚信，严谨的学术研究和技术探索是理解市场脉搏的唯一途径。
+            </p>
+        </div>
+    </section>
+
+    <!-- 核心技术 -->
+    <section id="technology" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white text-center mb-4">我们的核心技术框架</h2>
+            <p class="section-title font-semibold text-lg text-center mb-12">探索市场的多维视角</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">动态多策略引擎</h3>
+                    <p class="text-gray-400">我们的核心是一个由“多因子筛选+多策略融合”驱动的动态量化分析系统。它能够基于AI算法，根据市场特征为分析标的匹配最优策略模型，并进行动态轮换，以适应变化的市场环境。</p>
+                </div>
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">AI智能决策流程</h3>
+                    <p class="text-gray-400">我们采用基于强化学习的AI智能体，通过与市场历史数据的持续交互进行学习。它能全面感知市场环境，综合分析多维因子，并根据反馈信号不断优化内部决策逻辑，实现动态、自适应的分析决策。</p>
+                </div>
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">MA均线择时与日内风控逻辑</h3>
+                    <p class="text-gray-400">我们确立了一套以MA（移动平均线）为核心的买卖点分析参数。特别地，我们的模型将交易点的判定时间设置在收盘前特定时段，以研究此时股价波动对决策失误率的影响。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 风控理念 -->
+    <section id="risk-philosophy" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-white text-center mb-4">科学的风控理念</h2>
+            <p class="section-title font-semibold text-lg text-center mb-12">风险是研究的第一性原理</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">组合分散化研究</h3>
+                    <p class="text-gray-400">模型将模拟资金等分到多个低相关性的标的上，以研究如何通过分散化有效降低模拟组合的非系统性风险，避免单一资产的极端波动影响整体策略的稳定性。</p>
+                </div>
+                <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">动态止盈止损机制</h3>
+                    <p class="text-gray-400">创新的动态机制，由AI智能体对每笔模拟持仓的“未来预期收益”进行实时动态评估，并据此调整止盈止损点。这旨在避免传统固定阈值策略的僵化，探索更优的风险回报管理方式。</p>
+                </div>
+                 <div class="card p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-white mb-3">仓位动态管理</h3>
+                    <p class="text-gray-400">AI智能体能够实时评估市场风险，并根据风险等级（高、中、低）动态调整模拟总仓位。这是我们探索穿越不同市场周期的策略稳定性的核心技术之一。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 研究报告 -->
+    <section id="report" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">获取独家研究报告</h2>
+            <p class="section-title font-semibold text-lg mb-8">数据决策 vs. 传统经营</p>
+            <p class="max-w-3xl mx-auto text-gray-300 mb-8">
+                量化分析与开一家实体店，两种商业模式的决策逻辑有何根本不同？我们撰写了一份深度对比报告，从数据依赖、反馈循环、风险管理等多个维度，剖析两种模式的优劣。这不仅是金融市场的洞察，更是对现代商业决策的深度思考。
+            </p>
+            <a href="#partnership" class="btn-primary font-bold py-3 px-8 rounded-lg text-lg inline-block">提交信息，立即获取</a>
+        </div>
+    </section>
+
+    <!-- 合作洽谈 -->
+    <section id="partnership" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 max-w-xl">
+             <div class="counter-box text-center p-6 rounded-xl shadow-lg mb-10">
+                <p class="text-gray-300 text-lg">已有 <span id="counter" class="text-yellow-400 font-bold text-2xl">68,653</span> 位专业投资者获取报告</p>
+            </div>
+            
+            <h2 class="text-3xl font-bold text-white text-center mb-4">提交信息，即刻获取</h2>
+             <p class="text-gray-400 text-center mb-8">我们期待与券商及其他机构建立深度合作，共同探索流量转化的新模式。</p>
+
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-300">姓名</label>
+                    <input type="text" id="name" name="name" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:ring-yellow-500 sm:text-sm text-white p-3">
+                    <p class="mt-1 text-xs text-gray-500">*请使用与未来券商开户一致的真实姓名。</p>
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-300">手机号</label>
+                    <input type="tel" id="phone" name="phone" required class="form-input mt-1 block w-full rounded-md border-gray-600 shadow-sm focus:ring-yellow-500 sm:text-sm text-white p-3">
+                </div>
+                <div>
+                    <button type="submit" class="w-full btn-primary font-bold py-3 px-4 rounded-md shadow-sm text-lg">确认提交</button>
+                </div>
+            </form>
+            <div id="form-message" class="mt-4 text-center"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700">
+        <div class="container mx-auto py-6 px-6 text-center text-gray-500">
+            <p>&copy; 2025 兴盛文化传媒有限公司. All Rights Reserved.</p>
+            <p class="text-xs mt-2">免责声明：本网站所有内容仅为学术研究与模型展示，不构成任何投资建议。市场有风险，投资需谨慎。</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 动态计数器
+            const counterElement = document.getElementById('counter');
+            let baseCount = 68653;
+            // 页面加载时增加一个小的随机数，使其看起来是动态的
+            let randomIncrement = Math.floor(Math.random() * 10) + 1;
+            counterElement.textContent = (baseCount + randomIncrement).toLocaleString();
+
+            // 表单提交处理
+            const form = document.getElementById('contact-form');
+            const messageDiv = document.getElementById('form-message');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                const name = document.getElementById('name').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+
+                if (!name || !phone) {
+                    messageDiv.innerHTML = `<p class="text-red-400">姓名和手机号不能为空。</p>`;
+                    return;
+                }
+                
+                // 简单的手机号格式验证
+                const phoneRegex = /^1[3-9]\d{9}$/;
+                if (!phoneRegex.test(phone)) {
+                    messageDiv.innerHTML = `<p class="text-red-400">请输入有效的手机号码。</p>`;
+                    return;
+                }
+
+                // 模拟提交成功
+                messageDiv.innerHTML = `<p class="text-green-400">提交成功！正在为您准备报告...</p>`;
+                form.reset();
+
+                // 2秒后打开PDF报告
+                setTimeout(() => {
+                    // 在实际应用中，这里应替换为真实的PDF文件路径
+                    window.open('data:application/pdf;base64,' + btoa(document.getElementById('pdf-content').textContent), '_blank');
+                    messageDiv.innerHTML = '';
+                }, 2000);
+            });
+        });
+    </script>
+    
+    <!-- 存储PDF内容的隐藏元素 -->
+    <div id="pdf-content" style="display: none;">
+        数据决策视角：量化分析与实体经营对比报告
+
+        1. 引言
+        本报告旨在探讨两种截然不同的商业决策模式：以数据驱动的量化分析和以经验驱动的实体商业经营。通过对比其核心逻辑、风险管理和反馈机制，为现代商业决策提供新的视角。本报告不构成任何投资建议。
+
+        2. 量化分析的决策模式
+        - 核心：基于海量历史数据，通过数学建模和统计分析，寻找高概率的规律。
+        - 决策依据：严格的、可回测的策略规则。
+        - 风险管理：系统化、程序化的止损和仓位控制。
+        - 优势：克服人性弱点（贪婪、恐惧），决策纪律性强，可规模化复制。
+        - 劣势：依赖历史数据，可能无法应对未曾出现的“黑天鹅”事件。
+
+        3. 实体经营的决策模式
+        - 核心：基于市场调研、行业经验、商业直觉和客户关系。
+        - 决策依据：对市场需求的定性判断和对竞争格局的分析。
+        - 风险管理：通过现金流管理、库存控制、客户关系维护等方式进行。
+        - 优势：能够处理非结构化信息，适应性强，能通过服务和品牌建立护城河。
+        - 劣势：决策主观性强，易受决策者个人情绪和认知偏见影响，难以规模化复制。
+
+        4. 核心差异对比
+        | 特征维度     | 量化分析                   | 实体经营                 |
+        |--------------|----------------------------|--------------------------|
+        | 数据依赖性   | 极高，依赖结构化数据       | 中等，依赖定性与定量数据 |
+        | 决策速度     | 毫秒级，自动化执行         | 较慢，需要人工分析和判断 |
+        | 反馈循环     | 短，即时验证策略有效性     | 长，数月甚至数年         |
+        | 可复制性     | 高，模型可应用于不同标的   | 低，依赖特定资源和团队   |
+        | 人性影响     | 低，程序化执行             | 高，受情绪和偏见影响     |
+
+        5. 结论
+        量化分析与实体经营代表了两种不同的决策哲学。前者追求概率和纪律，后者依赖经验和直觉。两者并非完全对立，现代实体经营也越来越多地引入数据分析工具。理解两种模式的底层逻辑，有助于决策者在复杂多变的商业环境中做出更明智的选择。
+    </div>
+
+</body>
+</html>
