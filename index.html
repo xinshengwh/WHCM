@@ -74,6 +74,10 @@
             padding-top: 0;
             padding-bottom: 0;
         }
+        /* New Styles for About Section */
+        .border-l-accent {
+            border-left: 4px solid #FBBF24;
+        }
     </style>
 </head>
 <body>
@@ -83,15 +87,16 @@
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
             <a href="#home" class="flex items-center cursor-pointer">
                 <svg class="w-8 h-8 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                <span class="text-xl font-bold text-white">新盛通量化研究室</span>
+                <span class="text-xl font-bold text-white">新盛通量化</span>
             </a>
             <div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-gray-300 hover:text-yellow-400">首页</a>
-                <a href="#market-insight" class="text-gray-300 hover:text-yellow-400">市场洞察</a>
-                <a href="#technology" class="text-gray-300 hover:text-yellow-400">技术解析</a>
-                <a href="#risk-philosophy" class="text-gray-300 hover:text-yellow-400">风控理念</a>
-                <a href="#future-outlook" class="text-gray-300 hover:text-yellow-400">未来展望</a>
-                <a href="#partnership" class="text-gray-300 hover:text-yellow-400">合作洽谈</a>
+                <a href="#home" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">首页</a>
+                <!-- 新增：机构介绍 -->
+                <a href="#about" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">机构介绍</a>
+                <a href="#market-insight" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">市场洞察</a>
+                <a href="#technology" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">技术解析</a>
+                <a href="#risk-philosophy" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">风控理念</a>
+                <a href="#partnership" class="text-gray-300 hover:text-yellow-400 text-sm font-medium">合作洽谈</a>
             </div>
         </div>
     </nav>
@@ -104,12 +109,81 @@
                 <span class="text-yellow-400">用模型探索未来</span>
             </h1>
             <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-                新盛通量化研究室是一家专注于数据科学与量化策略模型研究的机构。我们痴迷于打磨各种量化分析模型，通过分享研究成果和工具，探索金融市场的复杂性。
+                新盛通量子科技是一家专注于前沿量化策略研发与逻辑分享的金融科技服务商。我们致力于搭建专业策略与个人投资者之间的桥梁。
             </p>
             <div class="mt-8">
                 <a href="#partnership" class="btn-primary font-bold py-3 px-8 rounded-lg text-lg inline-block">立即洽谈</a>
             </div>
-            <p class="mt-6 text-sm text-gray-500 font-semibold">*重要声明：我们不是投资机构，不提供任何形式的投资建议或咨询服务。所有内容仅为学术探讨和模型展示。</p>
+            <p class="mt-6 text-sm text-gray-500 font-semibold">*重要声明：我们致力于技术赋能，不提供任何证券投资咨询或资产管理服务。</p>
+        </div>
+    </section>
+
+    <!-- 新增板块：机构介绍 -->
+    <section id="about" class="bg-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-4">关于新盛通量子</h2>
+                <p class="section-title font-semibold text-lg">金融科技的探索者 · 券商生态的共建者</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- 左侧：核心文本 -->
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3 border-l-accent pl-4">我们的定位</h3>
+                        <p class="text-gray-300 leading-relaxed text-justify">
+                            广州新盛通量子科技有限公司（简称“新盛通量子”）是一家深耕于大湾区的<strong>金融科技（Fintech）创新企业</strong>。我们不同于传统的投资机构或教育培训平台，我们的核心角色是<strong>量化策略的“研发中心”与“开源社区”</strong>。我们依托人工智能与大数据技术，将复杂的机构级交易逻辑转化为可视化的策略模型，旨在打破信息壁垒，实现高端量化技术的普惠化。
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3 border-l-accent pl-4">商业模式与生态</h3>
+                        <p class="text-gray-300 leading-relaxed text-justify">
+                            新盛通量子是证券行业生态的重要共建者。我们与国内多家<strong>头部券商建立了深度战略合作关系</strong>。我们通过提供高质量的量化策略研究与市场分析工具，赋能广大投资者建立科学的交易体系；同时，作为券商的第三方技术服务伙伴，我们致力于优化用户与券商的连接效率，为投资者匹配更优质的交易通道与费率优惠，共同构建“科技+渠道+用户”的良性金融服务闭环。
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-white mb-3 border-l-accent pl-4">合规经营承诺</h3>
+                        <p class="text-gray-300 leading-relaxed text-justify">
+                            合规是我们的生命线。新盛通量子严格恪守<strong>第三方技术服务机构</strong>的业务边界。我们<span class="text-yellow-400 font-semibold">不涉及资金募集，不提供代客理财，不承诺投资收益</span>。我们仅提供策略逻辑分享、辅助分析工具及行业资讯服务，助力投资者在合规、透明、理性的环境中实现自我成长。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 右侧：视觉呈现 -->
+                <div class="grid gap-6">
+                    <div class="card p-6 rounded-lg bg-gray-900 border border-gray-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-400 bg-opacity-20 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                            </div>
+                            <h4 class="text-white font-bold">策略研发实验室</h4>
+                        </div>
+                        <p class="text-sm text-gray-400">专注于多因子模型、机器学习算法及各种量化策略逻辑的深度回测与开发。</p>
+                    </div>
+
+                    <div class="card p-6 rounded-lg bg-gray-900 border border-gray-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-400 bg-opacity-20 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h4 class="text-white font-bold">券商技术赋能</h4>
+                        </div>
+                        <p class="text-sm text-gray-400">为头部券商提供数字化获客解决方案，为用户争取极具竞争力的交易费率与增值服务。</p>
+                    </div>
+
+                    <div class="card p-6 rounded-lg bg-gray-900 border border-gray-700">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-yellow-400 bg-opacity-20 p-3 rounded-full mr-4">
+                                <svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                            </div>
+                            <h4 class="text-white font-bold">私域流量运营</h4>
+                        </div>
+                        <p class="text-sm text-gray-400">建立高粘性量化交流社群，通过硬核内容分享，筛选并沉淀高净值、高认知的成熟投资者。</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -342,4 +416,3 @@
 
 </body>
 </html>
-
